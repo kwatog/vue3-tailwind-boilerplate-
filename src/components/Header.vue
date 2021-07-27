@@ -11,10 +11,11 @@
         </button>
       </div>
       <div class="flex items-center justify-center md:justify-start flex-grow md:mr-12">
-        <img aria-hidden="true" 
+        <router-link to="/"><img aria-hidden="true" 
             src="../assets/logo.png" 
               alt="company logo"
               class="w-32 md:w-44 lg:w-52">
+        </router-link>
       </div>
       <div class="block sm:hidden">
         <button @click.prevent="toggleMenu()" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light">
@@ -24,7 +25,7 @@
       <div :class="state.menuOpen ? 'block': 'hidden'" class="w-full sm:flex sm:items-center sm:w-auto">
           <div class="nav-menu text-sm sm:text-base lg:text-xl sm:flex-grow">
             <router-link 
-              class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter md:mr-6 md:py-4"
+              class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter md:mr-6 md:py-4 hover:border-blue-800"
               v-for="link in menuLinks"
               :key="link.href"
               :to="link.href"
